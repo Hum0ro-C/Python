@@ -1,0 +1,23 @@
+"""
+题目：输入两个正整数计算最大公约数和最小公倍数
+
+含义：
+最大公约数：两个整数 a 和 b 的最大公约数，等于 b 和 a 除以 b 的余数 的最大公约数
+最小公倍数: 两个正整数 a 和 b 的最小公倍数，是同时被 a 和 b 整除的最小正整数
+
+version：1.0.0
+Author: Hum0ro
+
+"""
+
+import math
+
+a = int(input("请输入第一个正整数："))
+b = int(input("请输入第二个正整数："))
+
+gcd = math.gcd(a, b)
+lcm = a * b // gcd  # 或 math.lcm(a, b) (Python 3.9+ 支持)
+
+print(f"{a} 和 {b} 的最大公约数是 {gcd}")
+print(f"{a} 和 {b} 的最小公倍数是 {lcm}")
+
